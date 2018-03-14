@@ -34,10 +34,7 @@ def main():
     result = session_requests.post(login_url, data = payload, headers = dict(referer=login_url))
     if (result.ok):
         print('Login successful!')
-    
-    # Scrape url
-    result = session_requests.get(url, headers = dict(referer = url))
-    tree = html.fromstring(result.content)
+        
 
 if __name__ == '__main__':
     main()
